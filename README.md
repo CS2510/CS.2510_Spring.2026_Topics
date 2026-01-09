@@ -1,94 +1,13 @@
-# Fall2025.Topics
-These are the topics we are going to cover in class each day. Links to [example student videos ](https://www.youtube.com/playlist?list=PLH9qo0GKu2iSlchbSeksN18S87gMIjHOg) and [slides from class](https://uofnebraska-my.sharepoint.com/:f:/g/personal/17816140_nebraska_edu/EktuKJi3m_9Khf6sZLG_lrkBc46ZoPAOI6gCk86_xmf0sQ?e=sRqveC)
-
-<br/><br/>
----
----
-
-![Letter Boxing Banner Image](/support/letter-boxing.jpg)
-# Day 29 - December 10 - RectTransform and Letter Boxes (🧑‍🏫Lecture)
-
-## 🖼️Activity: Find Letterboxing in games
-- Clash Royale: https://www.youtube.com/watch?v=_hNxfiXmeAE
-- See Zelda at 2:50 in this video: https://www.youtube.com/watch?v=_hNxfiXmeAE
-
-## 💡New Idea: Letter boxes
-- Letter boxes preserve the aspect ratio of your game 
-- This means it appears the same across all screens
-
-## 👩‍💻Code Together: Letterboxes
-- Add a aspectRatio property to GameProperties
-- Add aspectRatio, effectiveWidth, effectiveHeight, letterBoxSize, and letterBoxType to Engine
-- Determine the kind of letter boxing required
-- Offset the UI appropriately
-- Draw the game
-- Draw the letter boxes
-
-## 💡New Idea: RectTransform
-- Look at the layout in MS Word
-- Look at Mario Kart 8 Deluxe: https://www.youtube.com/watch?v=SxeeuUh8R0Q
-- Basic Anchors
-- Basic Offset
-- Rectangular Anchors
-- Rectangular Offsets
-
-## 👩‍💻Code Together: RectTransform
-- Add RectTransform to UI game objects
-- Update Transform getLocalTransform to handle rect transform
-- Handle 
-
-## 🏁Final Code
-- [The final code for today](https://github.com/cs2510/Fall2025.Day29.RectTransform)
-
-
-<!-- I didn't have time to really cover RectTransform. I felt like I needed a demo that showed how the different configurations worked. -->
+# CS 2510, Spring 2026, Topics
+These are the topics we are going to cover in class each day. Links to [example student videos ](https://www.youtube.com/playlist?list=PLH9qo0GKu2iSlchbSeksN18S87gMIjHOg) and [slides from class](https://uofnebraska-my.sharepoint.com/:f:/g/personal/17816140_nebraska_edu/IgCOKBir22_NTq0uqlhKQTlNATgnX2nljSQqcI5skgvuM2A?e=A1hhjT)
 
 <br/><br/>
 ---
 ---
 
 
-# Day 28 - December 8 - (👟Sprint)
-<br/><br/>
----
----
-
-![Particle Systems Banner Image](/support/particle-systems.jpg)
-# Day 27 - December 3 - Particle Systems (🧑‍🏫Lecture)
-
-## 💡New Idea: Juicing with Particle Systems
-- Particle systems add "juice" to a game in two ways
-  - Providing feedback that something happened. For example, that you swung your sword or that your sword hit something
-  - Providing ambience. For example, the jets on a spaceship
-
-## 🖼️Activity: Identify Particle Systems
-- Look at a game. 
-- Identify the use of particles systems 
-- Identify if the particle systems are use for feedback or ambience
-
-## 💡New Idea: Particle Systems
-- Particle systems are components you add to a game object.
-- Particle systems update and draw a large number of particles without each particle being treated as its own game object
-- Particle Systems have a large number of parameters that are controlled with `distributions`.
-  - Start/end size of particles
-  - Start/end velocity of particles
-  - Start/end color of particles
-  - Start/end alpha of particles
-  - Lifetime of particles
-  - Number of particles created when the system starts
-  - Number of particle created as time passes
-  - and many more we didn't have time to discuss...
-
-## 👩‍💻Code Together: Particle Systems
-- Add a particle system component to the game engine
-- Use the particle system to add explosions to the space shooter game
-
-## 🏁Final Code
-- [The final code for today](https://github.com/cs2510/Fall2025.Day25.ParticleSystems)
-
-
-
-# Day 26 - December 1 - Pause and Time Scaling (👟Sprint)
+# Day 28 - April 29 - Pause and Time Scaling (👟Sprint)
+![Letter Boxing Banner Image](/support/timer.jpg)
 
 ## 💡New Idea: Pause
 - There are two kinds of pausing in a game
@@ -109,8 +28,9 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 
 
+
+# Day 27 - April 27 - Events (👟Sprint)
 ![Events Banner Image](/support/events.jpg)
-# Day 25 - November 24 - Events (👟Sprint)
 
 ## 💡New Idea: Events
 - Events provide a way for us to [loosely-couple](https://en.wikipedia.org/wiki/Loose_coupling) components that need to communicate
@@ -134,8 +54,9 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 
 
+
+# Day 26 - April 22 - Behavior Trees (🧑‍🏫Lecture)
 ![Behavior Tree Banner Image](/support/ai.jpg)
-# Day 24 - November 18 - Behavior Trees (🧑‍🏫Lecture)
 
 ## 🖼️Activity: Identify behaviors in a game
 - Look at the behaviors of NPCs in [Silk Song](https://www.youtube.com/watch?v=myzGQsKgxfI). Perhaps start at 4:00
@@ -183,8 +104,9 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+
+# Day 25 - April 20 - Cookies (👟Sprint)
 ![Cookies Banner Image](/support/cookies.jpg)
-# Day 23 - November 17 - Cookies (👟Sprint)
 
 ## 💡New Idea: We Can Store Information Across Scenes
 - We can read a persistent cookie with `document.cookie`
@@ -253,14 +175,15 @@ updated game/components/StartSceneController.js
 
 
 
-# Day 22 - November 12 - Class Canceled🤧
+# Day 24 - April 15 - (🤧Class Canceled)
 
 <br/><br/>
 ---
 ---
 
+
+# Day 23 - April 13 - Time (👟Sprint)
 ![Collision Layers Banner Image](/support/timer.jpg)
-# Day 21 - November 21 - Time (👟Sprint)
 
 ## 💡New Idea: Adjusting time based on the actual frame rate
 - We can get the elapsed time from `requestAnimationFrame` calls.
@@ -305,8 +228,9 @@ updated engine/Engine.js
 ---
 
 
+
+# Day 22 - April 08 - Collision Layers, etc. (🧑‍🏫Lecture 13)
 ![Collision Layers Banner Image](/support/layers.jpg)
-# Day 20 - November 6 - Collision Layers, etc. (🧑‍🏫Lecture)
 
 ## 🖼️Activity: Why do we play games
 - What motivates us to play games?
@@ -367,15 +291,17 @@ updated engine/Engine.js
 ---
 
 
-# Day 19 - November 3 - (👟Sprint)
+
+# Day 21 - April 06 - (👟Sprint)
 <br/><br/>
 ---
 ---
 
 
 
+
+# Day 20 - April 01 - Game Object Hierarchy (🧑‍🏫Lecture 12)
 ![Banner Image](support/hierarchy.jpg)
-# Day 18 - October 29 - Game Object Hierarchy (🧑‍🏫Lecture)
 
 ## 🖼️Activity: Game are built using hierarchies
 - Look for game object hierarchies in [Mario Kart 64](https://www.youtube.com/watch?v=w8K-heSWX8s)
@@ -408,7 +334,7 @@ updated engine/Engine.js
 ---
 
 
-# Day 17 - October 27 - (👟Sprint)
+# Day 19 - March 30 - (👟Sprint)
 
 ## 💡New Idea: Delayed Scene Changes
 - We don't want to change the scene in the middle of an update loop.
@@ -448,8 +374,9 @@ updated engine/Engine.js
 ---
 
 
+
+# Day 18 - March 25 - Scenes and the Scene Manager, etc.(🧑‍🏫Lecture 11)
 ![Scene Banner Image](support/set.jpg)
-# Day 16 - October 22 - Scenes and the Scene Manager, etc.(🧑‍🏫Lecture)
 
 ## 🖼️Activity: Spaces
 - Review a game that uses mouse input (DOTA 2?). 
@@ -499,8 +426,18 @@ updated engine/Engine.js
 ---
 
 
+
+# Day 17 - March 23 - (👟Sprint)
+<br/><br/>
+---
+---
+
+# Holiday - March 18 - (Class Canceled)
+
+# Holiday - March 16 - (Class Canceled)
+
+# Day 16 - March 11 - Cameras (🧑‍🏫Lecture 10)
 ![Camera Banner Image](support/camera.jpg)
-# Day 15 - October 15 - Cameras (🧑‍🏫Lecture)
 
 ## 🔙Review
 - Round trip with polar coordinates
@@ -552,24 +489,16 @@ updated engine/Engine.js
 ---
 
 
-# Day 14 - October 13 - Rotations in Collisions (👟Sprint)
 
-## 💡New Idea: Rotations in Collisions
-- We can rotate our polygons, but we aren't accounting for that in our collisions
-- If we rotate the polygon points before we do our collisions calculations, everything will line up
-- You can rotate a vector by
-  - Finding the current angle using the arctangent
-  - Adding the rotation
-  - Calculating the x and y coordinates using the sine and cosine functions
-- Never use `atan()`. The function is buggy. Always use `atan2()`.
-  
+
+
+# Day 15 - March 09 - (👟Sprint)
 <br/><br/>
 ---
 ---
 
-
+# Day 14 - March 04 - Mouse Input, etc. (🧑‍🏫Lecture 9)
 ![Mouse Banner Image](support/mouse.jpg)
-# Day 13 - October 8 - Mouse Input, etc. (🧑‍🏫Lecture)
 
 ## 💡New Idea: Show Text
 - Explore the `fillText` function
@@ -642,18 +571,26 @@ updated engine/Engine.js
 ---
 ---
 
-# Day 12 - October 6 - Platformers (👟Sprint)
+# Day 13 - March 02 - Rotations in Collisions (👟Sprint)
 
-## Ideas for Platformers
-- Be creative. Maybe you can grab the side of walls like in the original [NES Batman Game](https://www.youtube.com/watch?v=jMwksWSsfW4)
-- Fix a [bug in our collision code](https://github.com/CS2510/Fall2025.Day11.Gravity/blob/c7d44cf8bdfd83d5321bb389ef239d3dd6fbb836/platformer.html#L87)
-- Talk about making movement feel natural by accelerating in x and adding a terminal velocity in y.
+## 💡New Idea: Rotations in Collisions
+- We can rotate our polygons, but we aren't accounting for that in our collisions
+- If we rotate the polygon points before we do our collisions calculations, everything will line up
+- You can rotate a vector by
+  - Finding the current angle using the arctangent
+  - Adding the rotation
+  - Calculating the x and y coordinates using the sine and cosine functions
+- Never use `atan()`. The function is buggy. Always use `atan2()`.
+  
 <br/><br/>
 ---
 ---
 
+
+
+
+# Day 12 - February 25 - RigidBody and  Collision Resolution (🧑‍🏫Lecture 8)
 ![A shuttle launch](support/shuttle.jpg)
-# Day 11 - October 1 - RigidBody and  Collision Resolution (🧑‍🏫Lecture)
 
 ## 💡New Idea: Collision Detection Implementation
 - Previously we implemented the separate axis theorem
@@ -696,15 +633,20 @@ updated engine/Engine.js
 ---
 ---
 
+# Day 11 - February 23 - Platformers (👟Sprint)
 
-# Day 10 - September 29 - 👟Sprint
+## Ideas for Platformers
+- Be creative. Maybe you can grab the side of walls like in the original [NES Batman Game](https://www.youtube.com/watch?v=jMwksWSsfW4)
+- Fix a [bug in our collision code](https://github.com/CS2510/Fall2025.Day11.Gravity/blob/c7d44cf8bdfd83d5321bb389ef239d3dd6fbb836/platformer.html#L87)
+- Talk about making movement feel natural by accelerating in x and adding a terminal velocity in y.
 <br/><br/>
 ---
 ---
 
 
-![Two cars colliding](support/collision.jpg)
-# Day 09 - September 24 - Collisions  (🧑‍🏫Lecture)
+
+# Day 10 - February 18 - Collisions  (🧑‍🏫Lecture 7)
+![A shuttle launch](support/shuttle.jpg)
 
 ## ~~📢Announcements~~n
 
@@ -749,12 +691,16 @@ updated engine/Engine.js
 ---
 ---
 
-# Day 07 - September 22 - 👟Sprint
+# Day 09 - February 16 - (👟Sprint)
 <br/><br/>
 ---
 ---
 
-# Day 07 - September 17 - Collisions Prep (🧑‍🏫Lecture)
+
+
+
+# Day 08 - February 11 - Collisions Prep (🧑‍🏫Lecture 6)
+![Two cars colliding](support/collision.jpg)
 
 ## ~~📢Announcements~~
 
@@ -822,25 +768,13 @@ $$ v_1\ dot\ v_2=v_{1x}*v_{2x}+v_{1y}*v_{2y}$$
 ---
 ---
 
-# Day 06, September 15 - Engine Class, Instantiate (👟Sprint)
-
-## 🔙Review
-- Time outside of class means times in front of the keyboard coding
-- Working inside another engine does not count toward this class
-
-## 👩‍💻Activity:
-- Move the code in our html file into a new Engine class
-- Call instantiate to create new game objects as needed
-  - 🛝See slides on Starting Objects
-
-## 🏁Final Code
- - [The final code for today](https://github.com/CS2510/Fall2025.Day06.EngineClass)
+# Day 07 - February 09 - (👟Sprint)
 <br/><br/>
 ---
 ---
 
+# Day 06 - February 04 - Transforms (🧑‍🏫Lecture 5)
 ![Compass Banner Image](support/compass.jpg)
-# Day 05, September 10 - Transforms (🧑‍🏫Lecture)
 
 ## 📢Announcements
 - Upcoming sprint
@@ -904,8 +838,29 @@ $$ v_1\ dot\ v_2=v_{1x}*v_{2x}+v_{1y}*v_{2y}$$
 <br/><br/>
 ---
 ---
+
+
+# Day 05 - February 02 - Engine Class, Instantiate (👟Sprint)
+
+## 🔙Review
+- Time outside of class means times in front of the keyboard coding
+- Working inside another engine does not count toward this class
+
+## 👩‍💻Activity:
+- Move the code in our html file into a new Engine class
+- Call instantiate to create new game objects as needed
+  - 🛝See slides on Starting Objects
+
+## 🏁Final Code
+ - [The final code for today](https://github.com/CS2510/Fall2025.Day06.EngineClass)
+<br/><br/>
+---
+---
+
+
+
+# Day 04 - January 28 - Keyboard Input (🧑‍🏫Lecture 4)
 ![Keyboard Banner Image](support/keyboard.jpg)
-# Day 04, September 8 - Keyboard Input (🧑‍🏫Lecture)
 
 ## 📢Announcements
 - First self-assessment/quiz in 7 days
@@ -941,8 +896,10 @@ flowchart TD
 <br/><br/>
 ---
 ---
+
+
+# Day 03 - January 26 - Standard Architecture for Games (🧑‍🏫Lecture 3)
 ![Standard Architecture for Games Banner Image](support/plan.jpg)
-# Day 03, September 3 - Standard Architecture for Games (🧑‍🏫Lecture)
 
 ## 📢Announcements
 - None
@@ -1007,8 +964,16 @@ flowchart LR
 ---
 ---
 
+
+
+
+# Holiday - January 21 - (Class Canceled)
+
+# Holiday - January 19 - (Class Canceled)
+
+# Day 02 - January 14 - Game Loop (🧑‍🏫Lecture 2)
 ![Game Loop Banner Image](support/loop.jpg)
-# Day 02, August 27 - Game Loop (🧑‍🏫Lecture)
+
 ## 📢Announcements
 - No class on Monday due to Labor Day
 
@@ -1073,7 +1038,8 @@ flowchart LR
 ---
 ---
 
-# Day 01, August 25th - Introduction (🧑‍🏫Lecture)
+# Day 01 - January 01 - Introduction (🧑‍🏫Lecture 1)
+![Game Loop Banner Image](support/loop.jpg)
 
 ## 📢Announcements
 - Welcome to class
