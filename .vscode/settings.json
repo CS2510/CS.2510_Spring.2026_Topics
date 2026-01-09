@@ -1,0 +1,10 @@
+{
+  //This is a comment
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#AA9775",
+    "statusBar.background": "#AA9775",
+    "tab.activeBackground": "#72582A",
+    "tab.inactiveBackground": "#392603",
+    "sideBar.background": "#553D12"
+  }
+}

@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>JS From Python</title>
+</head>
+
+<body>
+  <script>
+
+    //
+    // Comments
+    //
+    // Comments in JS can be either inline or block
+    // Comments that start with two //s are inline -- they comment the remainder of the line of text
+    // Coming from python, `//` is very similar to `#`
+    // Comments that start with /* and end with */ are block -- they only comment what is between the beginning and ending of the /* and */
+    // This is (somewhat) similar to docstrings
+
+    // This is an inline comment
+
+    /* This is a block comment */
+
+    /*
+    This is a multi-line block comment
+    */
+
+    //
+    // Printing to the console
+    //
+    //You print to the console with `console.log`
+    //Most browsers let you open the console with F12 or Ctrl+Shift+I
+
+    console.log("This should be printed to the console.")
+    console.log("") // Empty line in the console
+
+    // Coming from python, `console.log()` is very similar to `print()`
+
+    //
+    // Variables
+    // 
+    // In modern JS, variables start with `let` or `const`. 
+    // `let` means that the variable can change.
+    // `const` means the variable cannot change.
+
+    let a = 1
+    const b = 2
+
+    // Coming from python, `let a = 1` is similar to `a = 1`
+
+    a = 2 // This is allowed since a was declared with `let`
+    //b = 3 //This will throw an error in the console since b was declared as const
+
+    // Variables - Warnings
+    //
+    // You can declare a variable using `var` or no keyword at all
+    // This is old syntax and should be avoided, but you may see it used 
+    // in examples online. 
+    //
+    // This syntax should be avoided because these variable have strange scoping rules 
+    // cause unexpected side effects
+
+    var c = 3 //Don't use this older syntax
+    d = 4 //Don't use this older syntax
+
+    //
+    // Strings
+    //
+    // Strings in JS can be denoted with `s, 's, or "s
+    let name = `Alice`
+    name = 'Betty'
+    name = "Carla"
+
+    // `` create interpolated strings
+    // This is similar to f strings in python
+    // except that variables are offset with ${} instead of just {}
+    console.log(`I have ${d} cats`) // Similar to Python's print(f"I have {d} cats")
+    console.log("")
+
+    //
+    // Numbers
+    //
+    // Numbers in JS are similar to those in Python
+    const PI = 3.141
+
+    // To truncate a number to be a float you have several options, depending on how you want the conversion to happen
+    console.log(`Math.trunc PI: ${Math.trunc(PI)}`)
+    console.log(`Math.ceil PI: ${Math.ceil(PI)}`)
+    console.log(`Math.floor PI: ${Math.floor(PI)}`)
+    console.log(`Math.round PI: ${Math.round(PI)}`)
+
+    console.log("")
+
+    console.log(`Math.trunc -PI: ${Math.trunc(-PI)}`)
+    console.log(`Math.ceil -PI: ${Math.ceil(-PI)}`)
+    console.log(`Math.floor -PI: ${Math.floor(-PI)}`)
+    console.log(`Math.round -PI: ${Math.round(-PI)}`)
+
+    // JS has an short-hand increment operator
+    e = 10
+    e++ // Identical to e += 1
+    console.log("")
+    console.log(e)
+
+    // JS does not have Python's floor division, so you need to use one of the above methods
+
+    //
+    // Booleans
+    //
+    // Booleans in JS are spelled lower-case, i.e. `true` and `false`
+    const easy = false
+
+    //
+    // Arrays (lists)
+    //
+    // Lists in JS are called arrays
+
+    const people = ["Bob", "Millie"]
+
+    // You get the length of a list using the length property
+    console.log("")
+    console.log(people.length)
+
+    // You add to an array with `.push`
+    people.push('Carl') //This is similar to Pythons .append()
+    console.log(people)
+
+    // Strangely, JS lacks a straightforward array delete method
+    // Instead, you need to toSpliced or filter
+    const friends = people.toSpliced(2, 1) //Remove elements starting at index 2. Remove 1 element
+    console.log(friends)
+    console.log("")
+
+    //
+    // Indentation/bracketing
+    //
+    // JS uses {}s instead of : and significant white space
+    // The general rule is that anywhere you would use a :, you instead use a pair of {}s
+    for (const person of friends) {
+      console.log(person)
+    }
+    console.log("")
+
+    //
+    // Conditionals
+    //
+    //These work similar to Python, but require ()s and {}s
+    if (2 > 1) {
+      console.log("Hi")
+    }
+    console.log("")
+
+    // JS uses the `&&` operator to mean `and` and the `||` operator to mean `or`
+    if(3 > 2 || 3 > 1){} // instead of `if 3 > 2 or 3 > 1:`
+
+
+    //
+    // Loops
+    //
+    // JS supports for and while loops
+    // Unlike python, they require ()
+
+    let count = 0
+    while (count < 5) {
+      count++  // or count += 1
+      console.log(count)
+    }
+    console.log("")
+
+    // JS doesn't have a range() function, but you can use the three spots in a for loop to accomplish that
+    for (let count = 0; count < 5; count++) {
+      console.log(count)
+    }
+    console.log("")
+
+    // JS has extended for loops as seen above with our loop over friends
+    // !! Note that the syntax uses the `of` keyword, not `in`
+    // `in` works, but loops over keys, not values. Don't worry about the technicality if you don't want to, just remember to use `of`
+    for (const person in friends) { //This probably won't do what you expect
+      console.log(person)
+    }
+    console.log("")
+
+    // 
+    // Classes
+    //
+    // JS supports classes, but the syntax is a little different than in Python
+
+    class Animal{
+
+    }// Same as class Animal:
+
+    class Dog extends Animal{
+
+    }// Same as class Dog(Animal):
+
+    // constructors in JS use the constructor keyword
+    // In JS, you use `super()` instead of `super().__init__()`
+    class Cat extends Animal{
+      constructor(){
+        super()
+        console.log("Meow")
+      }
+    }
+
+    //In JS, you instantiate an instance of a class with the `new` keyword
+
+    const fido = new Cat() // Similar to Python's `fido = Cat()`
+
+    // In JS, you access variables local to the instance with the `this` keyword
+    class Frog extends Animal{
+      constructor(){
+        super()
+        console.log("I am a frog")
+        this.isAmphibian = true // As opposed to self.is_amphibian = True
+      }
+    }
+
+    // In JS, static fields and functions are denoted with the 'static' keyword instead of the @staticmethod
+    class Tesla{
+      static inventor = "Musk" // Same for all calls to Tesla.inventor
+      model //Varies for each instance of a Tesla
+
+      static printInventor(){ //similar to @staticmethod
+        console.log(inventor) 
+      }
+    }
+
+
+    // 
+    // Getters and setters
+    //
+    // In JS, you can control how variables are set and retrieved with getters and setters
+
+    class PlayerHealth{
+
+      _health = 50
+
+      get health(){
+        //Additional logic here
+        return this._health
+      }
+
+      set health(value){
+        this._health = value
+        //Additional logic here
+      }
+    }
+
+
+
+
+
+  </script>
+</body>
+
+</html>
