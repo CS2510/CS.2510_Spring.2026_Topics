@@ -1,4 +1,4 @@
-# Day 28 - April 29 - Pause and Time Scaling (👟Sprint)
+# Day 28 - April 29 - Pause and Time Scaling (🧑‍🏫Lecture 16)
 ![Letter Boxing Banner Image](/support/timer.jpg)
 
 ## 💡New Idea: Pause
@@ -47,7 +47,7 @@
 
 
 
-# Day 26 - April 22 - Behavior Trees (🧑‍🏫Lecture)
+# Day 26 - April 22 - Behavior Trees (🧑‍🏫Lecture 15)
 ![Behavior Tree Banner Image](/support/ai.jpg)
 
 ## 🖼️Activity: Identify behaviors in a game
@@ -167,7 +167,7 @@ updated game/components/StartSceneController.js
 
 
 
-# Day 24 - April 15 - (🤧Class Canceled)
+# Day 24 - April 15 - (🧑‍🏫Lecture 14)
 
 <br/><br/>
 ---
