@@ -33,8 +33,18 @@ These are the topics we are going to cover in class each day. Links to [example 
  - Maverick Meadow in the UNO student organization focused on game development
 
 
+## 🎉Course Goals
+- We are going to build a 2D game engine and game in [JavaScript](javascript.info)
+- So we can focus on programming, not gathering assets, our games in this class will not include:
+  - Images (Including emoji)
+  - Sounds
+- I will be using the [VS Code IDE](https://code.visualstudio.com/) in class, but you can use any IDE
+- I will be using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code, but you don't have to.
+- You can see some [examples of what previous students have done on YouTube](https://www.youtube.com/playlist?list=PLH9qo0GKu2iSlchbSeksN18S87gMIjHOg)
   
-## 💡New Idea: Macro view of methods of drawing 
+
+  
+## 💡New Idea: Macro view of methods of drawing in HTML
 
 - Box Model
     - ![NY Times Cover for Pearl Harbor](https://www.nypl.org/scout/_next/image?url=https%3A%2F%2Fdrupal.nypl.org%2Fsites-drupal%2Fdefault%2Ffiles%2Fstyles%2Fmax_width_960%2Fpublic%2Fblogs%2Ff55b9a989d12b3c172d3510da17478ad.png%3Fitok%3DB3nyQ1YD&w=1920&q=90)
@@ -50,9 +60,7 @@ These are the topics we are going to cover in class each day. Links to [example 
       - [W3 Schools about canvas](https://www.w3schools.com/html/html5_canvas.asp)
       - [MDN about canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 
-## What we won't be doing in class
-- Images (Including emoji)
-- Sounds
+
 
 ## 💡New Idea: New JS concepts
 
@@ -73,7 +81,7 @@ These are the topics we are going to cover in class each day. Links to [example 
   - Example code: [A file written by the instructor that is designed to teach about JavaScript](./JS.html)
   - 🔗Additional information: [Geeks for Geeks about let and const](https://www.geeksforgeeks.org/javascript/difference-between-var-let-and-const-keywords-in-javascript/)
 
-- Good Introductionary Websites in JS
+- Good Introductory Websites in JS
   - [JavaScript.info Tutorial Site](https://javascript.info)
   - [W3 Schools JS tutorials](https://www.w3schools.com/js/)
   - [Geeks for Geeks JS tutorials](https://www.geeksforgeeks.org/javascript/javascript-tutorial/)
