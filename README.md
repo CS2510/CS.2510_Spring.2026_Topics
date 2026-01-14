@@ -4,6 +4,79 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 02 - January 14 - Game Loop (🧑‍🏫Lecture 2)
+![Game Loop Banner Image](support/loop.jpg)
+
+## 📢Announcements
+- No class on next week
+
+## 🔙Review
+- What is the difference between the Box Model, SVG, and Canvas?
+- What is the difference between the JS keyword `let` and `const`?
+
+## Syllabus
+
+## 💡New Idea: What is a computer game?
+- In this class, a game is an enjoyable, interactive, visual simulation.
+- How are we going to learn game programming?
+  - Learn the math
+  - Learn the architecture
+  - Practice
+
+## 💡New Idea: Repeated rendering
+- requestAnimationFrame
+  - 🔗Additional information:
+    - [MDN website about requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame)
+    - [W3 Schools requestAnimationFrame](https://www.w3schools.com/jsref/met_win_requestanimationframe.asp)
+
+## 💡New Idea: Updating our game
+- MVC 
+- gameLoop formalization 
+  - 🔗Additional information: [A blog post about what a game loop is](https://m-abdullah-ramees0916.medium.com/the-game-loop-f6f5cb68c00)
+
+
+## 💡New Idea: Vectors
+- What is a vector
+  - 🔗Additional information: [A Wikipedia article about Vectors](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))
+- Adding Vectors
+  - 🔗Additional information: [A website about adding vectors](https://mathworld.wolfram.com/VectorAddition.html)
+
+## 💡New Idea: Physics (Math/Simulation)
+- Velocity
+  - 🔗Additional information: [A Wikipedia article about Velocity](https://en.wikipedia.org/wiki/Velocity)
+
+
+## 💡New Idea: Classes in JS
+- classes in JS
+  - 🔗Additional information: 
+    - [MDN article about JS classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+    - [W3 Schools about JS classes](https://www.w3schools.com/js/js_classes.asp)
+- constructors in JS
+  - 🔗Additional information:
+    - [MDN article about constructors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor) 
+    - [W3 Schools article about constructors](https://www.w3schools.com/jsref/jsref_constructor_class.asp)
+- class functions in JS
+- fields in JS
+  - 🔗Additional information: [MDN article about class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+
+## 👩‍💻Activity
+- Create a simple bouncing triangle simulation using a new Vector2 class. (See Final Code section.)
+
+## 🤔To Think About
+- Why is creative mode in Minecraft considered a game while a painting app is not?
+
+## 🏁Final Code
+- Combining classes, vectors, and our original code, we arrive at our [Day 02 Code](https://github.com/CS2510/Fall2025.Day02.GameLoop).
+
+## Ideas to explore on your own
+- Can you change the code to make all the vertices of the triangle to have their own independent velocity?
+  - Can you make the above change using arrays so that you don't need new variables for each vertex?
+
+<br/><br/>
+---
+---
+
+
 
 # Day 01 - January 12 - Introduction (🧑‍🏫Lecture 1)
 ![Game Loop Banner Image](support/drawing.jpg)
