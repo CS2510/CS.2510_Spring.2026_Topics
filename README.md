@@ -4,6 +4,12 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+
+# Holiday - January 21 - (Class Canceled)
+
+# Holiday - January 19 - (Class Canceled)
+
+
 # Day 02 - January 14 - Game Loop (🧑‍🏫Lecture 2)
 ![Game Loop Banner Image](support/loop.jpg)
 
@@ -66,7 +72,7 @@ These are the topics we are going to cover in class each day. Links to [example 
 - Why is creative mode in Minecraft considered a game while a painting app is not?
 
 ## 🏁Final Code
-- Combining classes, vectors, and our original code, we arrive at our [Day 02 Code](https://github.com/CS2510/Fall2025.Day02.GameLoop).
+- Combining classes, vectors, and our original code, we arrive at our [Day 02 Code](https://github.com/CS2510/Spring26-Day02-Animation).
 
 ## Ideas to explore on your own
 - Can you change the code to make all the vertices of the triangle to have their own independent velocity?

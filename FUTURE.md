@@ -959,7 +959,4 @@ flowchart LR
 
 
 
-# Holiday - January 21 - (Class Canceled)
-
-# Holiday - January 19 - (Class Canceled)
-
+ 
