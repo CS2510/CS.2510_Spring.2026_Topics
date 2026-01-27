@@ -23,6 +23,11 @@ These are the topics we are going to cover in class each day. Links to [example 
   - What parts of the game are very specific to this game? These would be game-specific
 - By separating our code into engine-specific and game-specific code, we start to create an engine. This makes it easier to create games and prepares us to use a commercial game engine.  
 
+> [!Tip] History Moment
+>
+> The 1983 Mario Bros. Game (notice that it is not *Super* Mario Bros) was released by Nintendo for the Atari console. It is the first game in the Mario franchise to feature Luigi. 
+
+
 ## 👩‍💻Activity
 - Go through the Day03 code and label the code as being engine-specific or game-specific
 
@@ -33,7 +38,7 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 ## 💡New Idea: Main Game Architectural Hierarchy
 - Engine
-  - An engine is a collection of scene. 
+  - An engine is a collection of scenes. 
   - An engine tracks the current scene
 - Scenes (also levels or stages)
   - A scene is a collection of game objects
@@ -63,17 +68,25 @@ flowchart LR
 ## 👩‍💻Activity
 - Create the files for game-specific classes
   - MainScene
-  - TriangleGameObject
-  - TriangleController
+  - BatSymbolGameObject
+  - BatSymbolController
 - Add the constructor, start, update, and draw functions to each game-specific class
 - Rewrite the code so that the html code uses these new classes (see Final code section below).
 
+## 👩‍💻Activity
+- Look at a modern game that isn't even 2D. Where do you see Scenes, GameObjects, and Components
+  
+
+
+
+
+
 ## 🤔To Think About
-- Can you add a second kind triangle that has a random velocity and is colored red using this architecture?
+- Can you add a second kind objects that has a random velocity and is colored red using this architecture?
 
 ## 🏁Final Code
-<!-- - This is the link for [the final code we generated on Day03](https://github.com/CS2510/Fall2025.Day03.GameEngine)
-- 🔗You can see two other example games using the same architecture in the [other games Day03 repository](https://github.com/CS2510/Fall2025.Day03.OtherExamples) -->
+- This is the link for [the final code we generated on Day03](https://github.com/CS2510/Spring26-Day03-Standard-Architecture)
+
 
 <br/><br/>
 ---
