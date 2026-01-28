@@ -851,43 +851,7 @@ $$ v_1\ dot\ v_2=v_{1x}*v_{2x}+v_{1y}*v_{2y}$$
 
 
 
-# Day 04 - January 28 - Keyboard Input (🧑‍🏫Lecture 4)
-![Keyboard Banner Image](support/keyboard.jpg)
 
-## 📢Announcements
-- First self-assessment/quiz in 7 days
-- We will be "on the clock" this week.
-- Copy v transcribe (review AI)
-
-## 🔙Review
-- What is a Scene v Game Object v Component
-
-## 👩‍💻Activity: Code on your own -> Add a new game object
-- Add an additional triangle to the Day 03 code using Game Objects and Components
-- 🔗[Detailed instructions here](https://github.com/CS2510/Fall2025.Day04.Input/blob/main/TODO.md)
-
-## 💡New Idea: Keyboard Input
-- How is input handled by the computer?
-```mermaid
-flowchart TD
-  requestAnimationFrame-->input[Handle Input]-->requestAnimationFrame2[requestAnimationFrame]-->input2[Handle Input]
-```
-- How can we capture keyboard changes?
-- 🛝See slides on Input
-
-## 👩‍💻Activity: Keyboard Input
-- Move a game object on the screen based on keyboard input
-- See final code
-
-## 🤔To Think About
-- Why do many games use a combination of inputs, e.g. mouse and keyboard instead of just keyboard or mouse?
-
-## 🏁Final Code
-- [The final code from Day04](https://github.com/CS2510/Fall2025.Day04.Input)
-
-<br/><br/>
----
----
 
 
 

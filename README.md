@@ -4,12 +4,150 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 04 - January 28 - Keyboard Input (🧑‍🏫Lecture 4)
+![Keyboard Banner Image](support/keyboard.jpg)
+
+## 📢Announcements
+- First self-assessment/quiz next Monday
+- Copy v transcribe (review AI)
+- Upcoming sprint expectations
+  - You can [study JS](https://javascript.info) as part of your sprint
+  - You can plan the scenes, game objects, and components in your game. Just make sure you can show it to us during the sprint.
+  - You can review/finish transcribing the engine. You can go through and add comments to help you understand the concepts.
+  - Otherwise, work on your engine and game
+
+## 🔙Review
+- What is a Scene v Game Object v Component
+
+> [!Tip] History Moment
+>
+> In 1983, there was the first video game crash. Companies has over-invested in video games, flooding the market with competing consoles. Additionally, there was no quality control on games, so developers would rush games to market that were buggy.
+> This created an opening for Nintendo. The created their own console. In order to publish on the Nintendo, you had to have your game reviewed and approved by Nintendo. This meant that games were much less likely to be buggy. This, plus the improved hardware on the Nintendo, lead to a new interest in the video game market.
+>
+> The flagship game for the Nintendo was Super Mario Bros. which set the standard for scrolling platformers.
+
+
+
+## 👩‍💻Activity: Code on your own -> Add a new game object
+- Add an additional game object to the Day 03 code using Game Objects and Components
+  - The game object should draw a triangle
+  
+> [!Note] FAQ: How do I add a new scene to my game?
+>
+> In the `game` folder, create a new file that follows this pattern:
+> ```javascript
+> class NewScene extends Scene{
+>   constructor(){
+>     super()
+>     this.instantiate(new /*reference to game object class you want to instantiate*/(), new Vector2(/*location of new game object*/)) 
+>     /* Continue adding game objects as needed */
+>   }
+> }
+> ```
+> ! Don't forget to add a `<script src="[scene file name].js"></src>` to your `index.html` file
+
+
+> [!Note] FAQ: How do I add a new game object to my game?
+>
+> In the `game` folder, create a new file that follows this pattern:
+> ```javascript
+> class NewGameObject extends GameObject{
+>   constructor(){
+>     super()
+>     this.addComponent(new /*reference to component class you want to add*/()) 
+>     /* Continue adding components as needed */
+>   }
+> }
+> ```
+> - Don't forget to add a `<script src="[game object file name].js"></src>` to your `index.html` file
+> - In order for you to see your new game object, it needs a component that draws
+> - You also need to add the game object to a scene before it will be in your game
+
+> [!Note] FAQ: How do I add a new component  to my game?
+>
+> In the `game` folder, create a new file that follows this pattern:
+> ```javascript
+> class NewComponent extends Component{
+>   start(){
+>     /* Code for the component when it starts*/
+>   }
+>   update(){
+>     /* Code for the component when it update*/
+>   }
+>   draw(ctx){
+>     /* Code for the component when it updates*/
+>   }
+> }
+> ```
+> - Don't forget to add a `<script src="[component file name].js"></src>` to your `index.html` file
+> - In order for your component to be in your game, it needs to be attached to a game object that is in a scene
+
+
+
+## 💡New Idea: Keyboard Input
+- How is input handled by the computer?
+```mermaid
+flowchart TD
+  requestAnimationFrame-->input[Handle Input]-->requestAnimationFrame2[requestAnimationFrame]-->input2[Handle Input]
+```
+- How can we capture keyboard changes?
+- 🛝See slides on Input
+
+## 👩‍💻Activity: Add Input Class to our Engine
+```javascript
+class Input{
+  static keysDown = []
+
+  static keyDown(event){
+    Input.keysDown.push(event.code)
+
+  }
+
+  static keyUp(event){
+    Input.keysDown = Input.keysDown.filter(k=>k!=event.code)
+  }
+}
+```
+
+## 👩‍💻Activity: Add Connect our Input Class to our Engine
+Add the following to the `start()` function of `Engine.js`
+```javascript
+addEventListener("keydown", Input.keyDown)
+addEventListener("keyup", Input.keyUp)
+```
+
+
+
+## 👩‍💻Activity: Keyboard Input
+- Move a game object on the screen based on keyboard input
+- We do this by listening for keyboard events in the `update()` function of a component
+- Here is an example of what this might look like:
+```javascript
+ if(Input.keysDown.includes("ArrowRight"))
+  this.transform.position.x += 1
+    
+if(Input.keysDown.includes("ArrowLeft"))
+  this.transform.position.x -= 1
+```
+
+## 🤔To Think About
+- Why do many games use a combination of inputs, e.g. mouse and keyboard instead of just keyboard or mouse?
+
+## 🏁Final Code
+- [The final code from Day04]()
+
+<br/><br/>
+---
+---
+
 # Day 03 - January 26 - Standard Architecture for Games (🧑‍🏫Lecture 3)
 ![Standard Architecture for Games Banner Image](support/plan.jpg)
 
 ## 📢Announcements
 - Upcoming sprint expectations
   - You can [study JS](https://javascript.info) as part of your sprint
+  - You can plan the scenes, game objects, and components in your game. Just make sure you can show it to us during the sprint.
+  - You can review/finish transcribing the engine. You can go through and add comments to help you understand the concepts.
   - Otherwise, work on your engine and game
 
 ## 🔙Review
