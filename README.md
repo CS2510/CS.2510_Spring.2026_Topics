@@ -118,6 +118,8 @@ addEventListener("keyup", Input.keyUp)
 
 
 
+
+
 ## 👩‍💻Activity: Keyboard Input
 - Move a game object on the screen based on keyboard input
 - We do this by listening for keyboard events in the `update()` function of a component
@@ -128,6 +130,25 @@ addEventListener("keyup", Input.keyUp)
     
 if(Input.keysDown.includes("ArrowLeft"))
   this.transform.position.x -= 1
+```
+
+
+## Activity: Clean up
+- We don't need most of the code in `index.html` now. 
+- We can clear it out so it it just the following:
+```javascript
+ class Vector2 {
+    constructor(x, y){
+        this.x = x
+        this.y = y
+    }
+    
+    x
+    y
+}
+
+Engine.currentScene = new MainScene()
+Engine.start()
 ```
 
 ## 🤔To Think About
