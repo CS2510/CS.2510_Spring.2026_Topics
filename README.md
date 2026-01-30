@@ -155,7 +155,7 @@ Engine.start()
 - Why do many games use a combination of inputs, e.g. mouse and keyboard instead of just keyboard or mouse?
 
 ## 🏁Final Code
-- [The final code from Day04]()
+- [The final code from Day04](https://github.com/CS2510/Spring26-Day04-Keyboard-Input)
 
 <br/><br/>
 ---
