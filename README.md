@@ -4,6 +4,36 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 05 - February 02 - Engine Class, Instantiate (👟Sprint)
+
+![Fonts](support/fonts.png)
+
+## 🔙Review
+- Time outside of class means times in front of the keyboard coding
+- Working inside another engine does not count toward this class
+- You can work ahead if you want
+
+## 💡New Idea: Drawing Text
+- We can create a component that renders text.
+- This component is engine-specific, so we can put it in the engine
+
+## 💡New Idea: Generic Polygon
+- We can create a component called Polygon that is generic to the engine
+
+
+## 💡New Idea: Customizable Components
+- We can set options on the components inside of a game object
+
+
+
+## 🏁Final Code
+ - [The final code for today]()
+<br/><br/>
+---
+---
+
+
+
 # Day 04 - January 28 - Keyboard Input (🧑‍🏫Lecture 4)
 ![Keyboard Banner Image](support/keyboard.jpg)
 
