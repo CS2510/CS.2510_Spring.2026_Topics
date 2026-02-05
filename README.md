@@ -6,12 +6,22 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 # Day 06 - February 04 - Text, Prefabs, and Time (🧑‍🏫Lecture 4)
 
-![Fonts](support/fonts.png)
 
 ## 🔙Review
 - Time outside of class means times in front of the keyboard coding
 - Working inside another engine does not count toward this class
 - You can work ahead if you want
+
+
+## 👩‍💻Activity: Think about fonts
+- Look at the listed fonts.
+- What game would you use each font for?
+![Fonts](support/fonts.png)
+
+## 👩‍💻Activity: Look at the fonts used in a real game
+- Look at [the fonts that SuperCell uses in Clash of Clans](https://fankit.supercell.com/d/vkEdmkUCngKw/font#/basics/clash-of-clans-fonts)
+
+
 
 ## 💡New Idea: Drawing Text
 - We can create a component that renders text.
