@@ -20,14 +20,25 @@ These are the topics we are going to cover in class each day. Links to [example 
 ## 💡New Idea: Generic Polygon
 - We can create a component called Polygon that is generic to the engine
 
+> [!Tip] History Moment
+>
+> The success of the original Nintendo Entertainment System (simply called Nintendo at the time) and the original Super Mario Bros. was electric. People wanted more and Nintendo responded to the demand by inventing a Super Mario Bros. 2. The company took a platformer that had been released in Japan but not the US called ume Kōjō: Doki Doki Panic. Nintendo changed some sprites so the main characters looked like Mario characters and released it as Super Mario Bros. 2. This means Super Mario Bros. 2 is the only game with certain game mechanics, including pulling radishes out of the ground and flinging them at enemies.
 
 ## 💡New Idea: Customizable Components
 - We can set options on the components inside of a game object
 
+## 💡New Idea: Anonymous Game Object Declaration
+
+## 💡New Idea: deltaTime
+
+## 💡New Idea: Variable deltaTime
+
+
+
 
 
 ## 🏁Final Code
- - [The final code for today]()
+ - [The final code for today](https://github.com/CS2510/Spring26-Day06-Text)
 <br/><br/>
 ---
 ---
