@@ -4,7 +4,7 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
-# Day 05 - February 02 - Engine Class, Instantiate (👟Sprint)
+# Day 06 - February 04 - Text, Prefabs, and Time (🧑‍🏫Lecture 4)
 
 ![Fonts](support/fonts.png)
 
@@ -16,9 +16,56 @@ These are the topics we are going to cover in class each day. Links to [example 
 ## 💡New Idea: Drawing Text
 - We can create a component that renders text.
 - This component is engine-specific, so we can put it in the engine
+- In order to do this, we need to have public variables on the component for the text to draw
+
+```javascript
+class TextLabel extends Component{
+    font = "20px Time"
+    fillStyle = "black"
+    text = "[No Text]"
+    draw(ctx){
+        ctx.save()
+        ctx.translate(this.transform.position.x, this.transform.position.y)
+        ctx.font = this.font
+        ctx.fillStyle = this.fillStyle
+        ctx.fillText(this.text, 0, 0)
+
+        ctx.restore()
+    }
+}
+```
 
 ## 💡New Idea: Generic Polygon
 - We can create a component called Polygon that is generic to the engine
+- In order to do this, we need to have public variables on the component for the list of points to draw
+
+```javascript
+class Polygon extends Component{
+    points = []
+    fillStyle = "black"
+    strokeStyle = "transparent"
+    lineWidth = 5
+    draw(ctx){
+        ctx.save()
+        ctx.translate(this.transform.position.x, this.transform.position.y)
+        
+        ctx.beginPath()
+        for(const point of this.points){
+            ctx.lineTo(point.x, point.y)
+        }
+        ctx.closePath()
+
+        ctx.fillStyle = this.fillStyle
+        ctx.strokeStyle = this.strokeStyle
+        ctx.lineWidth = this.lineWidth
+
+        ctx.stroke()
+        ctx.fill()
+
+        ctx.restore()
+    }
+}
+```
 
 > [!Tip] History Moment
 >
@@ -26,12 +73,74 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 ## 💡New Idea: Customizable Components
 - We can set options on the components inside of a game object
+- We can update `addComponent` so it takes an options argument.
+- We then take that options argument and apply it to the component
+
+```javascript
+ addComponent(component, options){
+    Object.assign(component, options)
+    this.components.push(component)
+    component.gameObject = this
+    return component
+}
+```
 
 ## 💡New Idea: Anonymous Game Object Declaration
+- One workflow for creating game objects is to create a class for the game object, and instantiate an instance of that class when we create it.
+  - This kind of game object is called a `prefab`
+  - Prefabs should can be when ever you will instantiate a game object more than once
+- Another workflow for creating game objects is to instantiate a `GameObject` in your scene file and then add components to the new game object.
+  - This kind of game object is called an `anonymous game object`
+  - Anonymous game objects *can* be used when you only instantiate a game object once.
+  - For example, anonymous game objects are great for text that appears once in one scene.
+
+The following code demonstrates both the instantiate of a prefab and the instantiation of an anonymous game object.
+Note that when we create the anonymous game object, we set the value of the TextLabel component using our new addComponent method
+
+```javascript
+//Instantiate a game object from a prefab
+this.instantiate(new TriangleGameObject(), new Vector2(300, 300))
+
+//Example of an anonymous game object
+const title = this.instantiate(new GameObject(), new Vector2( 500, 500))
+title.addComponent(new TextLabel(), {text: "BAT ATTACK"})
+```
+
 
 ## 💡New Idea: deltaTime
+- Not all computers run at the same speed, and at times the same computer will run at different speeds during the lifecycle of a game.
+- We need to make our game `frame rate independent`
+- We do this by tracking a variable called `deltaTime`.
+  - We multiply all movements by this variable.
+  - This makes movement speed a rate of pixels per second
+
+```javascript
+class Time{
+    static deltaTime = 1/60
+}
+```
 
 ## 💡New Idea: Variable deltaTime
+- Tracking deltaTime by itself will not make our game frame rate independent. 
+- We need to ask how much time has passed between each frame
+  - We do this by adding a new argument to our game loop, which gets called by requestAnimationFrame
+
+```javascript
+static gameLoop(time){
+    if(Engine.lastTimestamp){
+        const diff = time - Engine.lastTimestamp
+        const diffInSeconds = diff / 1000
+        Time.deltaTime = diffInSeconds
+        Engine.lastTimestamp = time
+    }
+    else{
+        Engine.lastTimestamp = time
+    }
+    Engine.update()
+    Engine.draw()
+    requestAnimationFrame(Engine.gameLoop)
+}
+```
 
 
 
@@ -43,6 +152,11 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 05 - February 02  (👟Sprint)
+
+<br/><br/>
+---
+---
 
 
 # Day 04 - January 28 - Keyboard Input (🧑‍🏫Lecture 4)

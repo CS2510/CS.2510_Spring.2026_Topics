@@ -1,0 +1,8 @@
+# List of Javascript concepts used in this course
+- `let` and `const`
+- `class`es 
+- Class inheritance
+- `get`ters and `set`ters
+- Lambda functions
+- `function`s
+- `static` member variables
