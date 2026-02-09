@@ -4,6 +4,14 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 07 - February 09  (👟Sprint)
+
+Reminder to follow the course policies about academic integrity.
+
+<br/><br/>
+---
+---
+
 # Day 06 - February 04 - Text, Prefabs, and Time (🧑‍🏫Lecture 4)
 
 
