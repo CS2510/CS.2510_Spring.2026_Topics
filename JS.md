@@ -6,3 +6,5 @@
 - Lambda functions
 - `function`s
 - `static` member variables
+- `instanceof`
+- Passing variables to `super`

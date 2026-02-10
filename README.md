@@ -4,6 +4,70 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 08 - February 11 - Game Object Lifecycle & Communication (🧑‍🏫Lecture 6)
+
+## 🔙Review
+- Pushing to GitHub
+
+## 💡New Idea: Game Object Lifecycle - Start
+- Add `start`
+  - We've had start functions but never used them
+  - Track if a game object has started
+  - When updating, call start first if we haven't started
+- Add `instantiate`
+  - Unity has a global function called `instantiate`. 
+  - We can mimic that behavior
+
+## 💡New Idea: Game Object Lifecycle - Destroy
+- Add `destroy`
+  - We don't destroy objects immediately
+  - We mark them as having been deleted and remove them at the end of the update cycle
+- Filter objects with `markForDelete`
+  - Remove objects that have their mark for delete flag set
+- Call `onDestroy` on game objects that are destroyed
+  - `onDestroy` is the event we call on components when their parent game object is removed
+
+## 💡New Idea: `broadcastMessage`
+- We can simplify calls to all components in a game object with `broadcastMessage`
+- `broadcastMessage` calls a given functions on all components with that function
+
+## 💡New Idea: Named game objects
+- To help us find game objects, each game object needs a name
+- We add a name variable to `GameObject`
+- We set the name of a game object in its `constructor`
+
+## 💡New Idea: Communication - Find a component on a game object
+- We often need to communicate within a game object
+- If two components share a game object, they can communicate with `this.gameObject.getComponent()`
+- `getComponent` returns a component of a given type using `instanceof`
+
+## 💡New Idea: Communication - Find a game object within a scene
+- We often need to communicate between components on different game objects
+- We start by find the game object in question
+  - We use the static function `find` on `GameObject`
+  - `find` returns the first game object with a given name
+- We then find the component we need to communicate with
+  - `GameObject.find(<name>).getComponent(<type>)`
+
+## 💡New Idea: Communication - Communicate across scenes
+- We can't directly communicate between components on different scenes
+- Instead we communicate indirectly
+- One way to communicate indirectly is with `Globals`
+- By setting a static variable on `Globals`, components in other scenes can query than variable.
+
+
+
+
+
+
+
+
+
+<br/><br/>
+---
+---
+
+
 # Day 07 - February 09  (👟Sprint)
 
 Reminder to follow the course policies about academic integrity.
@@ -12,7 +76,7 @@ Reminder to follow the course policies about academic integrity.
 ---
 ---
 
-# Day 06 - February 04 - Text, Prefabs, and Time (🧑‍🏫Lecture 4)
+# Day 06 - February 04 - Text, Prefabs, and Time (🧑‍🏫Lecture 5)
 
 
 ## 🔙Review

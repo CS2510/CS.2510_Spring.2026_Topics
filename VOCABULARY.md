@@ -8,3 +8,6 @@
 - Anonymous Game Object
 - Delta Time
 - Frame rate independence
+- Direction communication
+- Indirection communication
+- GameObject lifecycle
