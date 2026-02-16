@@ -1,0 +1,12 @@
+# List of math concepts
+- Adding Vectors
+- Subtracting Vectors
+- Multiplying Vectors
+  - times
+  - scale
+  - dot
+  - cross product
+- Vector Magnitude
+- Normalize Vectors
+- Find Orthogonal Vectors
+- Separate Axis Theorem

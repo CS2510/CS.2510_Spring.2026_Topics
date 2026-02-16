@@ -11,3 +11,4 @@
 - Direction communication
 - Indirection communication
 - GameObject lifecycle
+- Separate axis theorem
