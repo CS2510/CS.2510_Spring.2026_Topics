@@ -23,8 +23,6 @@ These are the topics we are going to cover in class each day. Links to [example 
   - We do this by dividing `x` and `y` by the magnitude of the vector
 - `orthogonal` returns a vector that is orthogonal (perpendicular) to the given vector
 
-
-
 ## 💡New Idea: Vector Multiplication
 - There are three basic ways to multiply vectors in game programming: `times`, `scale`, and `dot`
   - We can also do a cross product, but we don't need that for collision detection
@@ -39,38 +37,32 @@ $$ v_1\ dot\ v_2=v_{1x}*v_{2x}+v_{1y}*v_{2y}$$
   - When two vectors have an identical heading, their dot product is 1. If there are orthogonal, their dot product is 0. If they are pointing in opposite directions, then the dot product will be -1.
   - Additional information can be found here: https://en.wikipedia.org/wiki/Dot_product
 
-
-## 💡New Idea: Rigid Body
-- In order to implement movement, we attached a `RigidBody` component to game objects
-  - Rigid bodies track their velocity and acceleration
-  - This is also where we can determine if a game object responds to gravity
-- Acceleration updates velocity every frame
-  - `velocity = acceleration * deltaTime`
-- Velocity updates position every frame
-  - `position = velocity * deltaTime`
-- We add gravity by assigning an acceleration toward the ground
-  - Technically this is `32 ft/s^2` or `9.8 m/s^2`, but games often choose values that "feel right"
-
-## 💡New Idea: Collision Detection v Collision Resolution
-- Collision detection determines if two objects are overlapping
-- Collision resolution uses physics to resolve (remove) collisions from a game
-- Not all collisions need to be resolved. 
-  - For example, a door might have a collider that detects of the player is near the door. Neither the player nor this collider need to resolve a collision. Instead, the door needs to know its time to open or close.
-  - A coin might have a collider. When the player touches the coin, you may want the player to collect the coin instead of bouncing off it.
-- Some objects are `physics static` meaning that physics objects resolve collisions with them, but they never move.
-  - For example, a platform in a platformer resolves collisions with teh player, but the platform doesn't move.
-- How we differentiate collision types:
-  - If a game object has a `Collider` component but not a `RigidBody` component, then it is a `trigger`. It does not respond to physics. When there is an overlap, we broadcast the message `onTriggerEnter`
-  - If a game object has a `Collider` component and a `RigibBoby` component, this it responds to physics. When the engine resolves an overlap, we broadcast the message `onCollisionEnter`
-    - If a rigid body is marked at `physics static` then it doesn't move when another rigid body collides with it.
-
-
 ## 💡New Idea: Separate Axis Theorem
 - Consider a point and a polygon. How do I know if the point is inside the polygon?
 - What if I had a light that I shown on the point and line. If I can find a position for the light where the shadow of the point and polygon are not overlapping, then they can't be in collision.
 - There are infinite positions for the "light". Smart mathematicials that shown that if we shine the light in the direction orthogonal to all the lines in the polygon, we have checked enough "lights"
 - This does not work with concave polygons.
   - We can use Separate Axis Theorem if we break the polygon into sub-polygons, but that is out of scope for this project.
+
+
+## 💡New Idea: Implementing the Separate Axis Theorem
+- Working backward, write a function that takes points projected onto a line. Think of them as points that represent shadows. Can I determine if one point is between all the other points (the collision point and the projection of the polygon)
+  - See if the point is between the min and max of the other points
+- Given a direction of a "flashlight", can I determine if a point is in collision with a polygon
+  - Project the point and polygon vertices onto a line perpendicular to the direction of the flashlight. See if there is an overlap
+- Given a point and polygon, can I determine if there is any overlap?
+  - Project the point and vertices onto the lines that are perpendicular to the edges of the polygon. Look for overlap.
+- Given a point and a game object, can I determine if there is any overlap?
+  - Move the vertices in the Polygon component based on the Transform component. Then see if there is any overlap.
+
+
+## 💡New Idea: Types of Collisions
+
+| Description                                                                                     | Type             |
+| ----------------------------------------------------------------------------------------------- | ---------------- |
+| Collisions without any physics response. For example, Mario touching a coin.                    | Trigger          |
+| Collisions when one of the objects is fixed in place. For example, Sonic sanding on the ground. | Collision Static |
+| Collisions when both objects respond to physics. For example, two marbles colliding.            | Collision        |
 
 ## 🏁Final Code
 - [The final code for today](https://github.com/cs2510/Fall2025.Day)

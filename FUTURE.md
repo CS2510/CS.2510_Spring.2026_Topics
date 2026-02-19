@@ -849,6 +849,36 @@ $$ v_1\ dot\ v_2=v_{1x}*v_{2x}+v_{1y}*v_{2y}$$
 ---
 ---
 
+# Other - Collisions
+
+## 💡New Idea: Collision Detection v Collision Resolution
+- Collision detection determines if two objects are overlapping
+- Collision resolution uses physics to resolve (remove) collisions from a game
+- Not all collisions need to be resolved. 
+  - For example, a door might have a collider that detects of the player is near the door. Neither the player nor this collider need to resolve a collision. Instead, the door needs to know its time to open or close.
+  - A coin might have a collider. When the player touches the coin, you may want the player to collect the coin instead of bouncing off it.
+- Some objects are `physics static` meaning that physics objects resolve collisions with them, but they never move.
+  - For example, a platform in a platformer resolves collisions with teh player, but the platform doesn't move.
+- How we differentiate collision types:
+  - If a game object has a `Collider` component but not a `RigidBody` component, then it is a `trigger`. It does not respond to physics. When there is an overlap, we broadcast the message `onTriggerEnter`
+  - If a game object has a `Collider` component and a `RigibBoby` component, this it responds to physics. When the engine resolves an overlap, we broadcast the message `onCollisionEnter`
+    - If a rigid body is marked at `physics static` then it doesn't move when another rigid body collides with it.
+
+## 💡New Idea: Rigid Body
+- In order to implement movement, we attached a `RigidBody` component to game objects
+  - Rigid bodies track their velocity and acceleration
+  - This is also where we can determine if a game object responds to gravity
+- Acceleration updates velocity every frame
+  - `velocity = acceleration * deltaTime`
+- Velocity updates position every frame
+  - `position = velocity * deltaTime`
+- We add gravity by assigning an acceleration toward the ground
+  - Technically this is `32 ft/s^2` or `9.8 m/s^2`, but games often choose values that "feel right"
+
+
+
+
+
 
 
 
