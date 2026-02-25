@@ -4,14 +4,72 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
-# Day 10 - February 28  - Collisions Prep(🧑‍🏫Lecture)
+# Day 12 - February 25 - Mouse Collisions (🧑‍🏫Lecture 8)
+![A computer mouse](support/mouse2.jpg)
+
+## 🖼️Activity: Look at an early game that used the mouse
+- 1993's The Incredible Machine utilized the mouse to create a novel puzzle game
+- [Gameplay from The Incredible Machine](https://www.youtube.com/watch?v=pTbSMKGQ_rU)
+
+## 💡New Idea: Colliders
+- A collider is a component that tells the collision engine that it is listening for collisions
+- A collider has a list of points that default to the points listed in the game object's polygon 
+  - Overriding these points can make it so we can collide against simpler geometry that what is displayed, a common technique in games
+
+## 💡New Idea: Mouse Collision Events
+- We listen for three mouse collision events
+  - onMouseEnter - The mouse overlapped a collider for the first time this frame
+  - onMouseOver - The mouse overlapped a collider that it overlapped a previous frame
+  - onMouseExit - The mouse no longer overlaps a collider that it overlapped the previous frame
+- To do this, we need to track mouse collision this frame and the previous frame
+
+## 💡New Idea: Mouse Button Events
+- We listen for four mouse button and collision events
+  - onMouseDown - the mouse overlaps a collider and the mouse went down this frame
+  - onMouseUp - The mouse overlaps a collider and the mouse went up this frame
+  - onMouseUpAsButton - The mouse overlaps a collider, the mouse went up this frame, and the mouse has been continuously overlapping this collider since the frame the button went down
+  - onMouseDrag - The mouse overlaps a collider, the mouse button is down, and the mouse is moving
+- To do onMouseUpAsButton this, we need to track the colliders that the mouse overlapped since the last time the mouse button went down
+  - Notably, when we have an onMouseExit, that collider should be removed from the list
+- A naive implementation of onMouseDrag will fail when the user moves the mouse quickly. To solve this, we track on onMouseDrag on all overlaps this frame and the previous frame. If we call onMouseDrag from a collider from the previous frame, then we add readd it to the list of objects that were updated this frame.
+
+## 🖼️Activity: Look at an early game that used the mouse
+- Deja Vu: A Nightmare Come True was an early escape room game
+- [Gameplay from Deja Vu: A Nightmare Come True](https://www.youtube.com/watch?v=xwrqhsTFTVU)
+
+
+## 🏁Final Code
+- [The final code for today](https://github.com/cs2510/Fall2025.Day)
+<br/><br/>
+---
+---
+
+
+# Day 11 - February 23 - Input This Frame (👟Sprint 4)
+![A frame](support/frame.jpg)
+
+## 💡New Idea: Input This Frame
+- We often need to know when a key or mouse button goes down or up, not just when it is held down
+  - For example, when to fire a laser or when to "click" a button
+- To do this, we need to track what input events happened each frame.
+- We clear what happened each frame with an update function in Input
+
+
+## 🏁Final Code
+- [The final code for today](https://github.com/CS2510/Spring26-Day11-Advanced-Input)
+
+<br/><br/>
+---
+---
+
+
+# Day 10 - February 18  - Collisions Prep(🧑‍🏫Lecture 7)
 ![A shuttle launch](support/shuttle.jpg)
 
 ## 🖼️Activity:
 - Look at collisions in a game: https://www.allsonicgames.net/sonic-the-hedgehog.php
 
 
-## 💡New Idea: Mouse Movement
 
 ## 💡New Idea: Vector Operations
 - In order to do collisions, we need to be able to do lot of different operations on vectors
@@ -70,7 +128,7 @@ $$ v_1\ dot\ v_2=v_{1x}*v_{2x}+v_{1y}*v_{2y}$$
 ---
 ---
 
-# Day 09 - February 13  - (👟Sprint)
+# Day 09 - February 13  - (👟Sprint 3)
 
 Additional information about communication. See Day 08
 
@@ -150,7 +208,7 @@ Additional information about communication. See Day 08
 ---
 
 
-# Day 07 - February 09  (👟Sprint)
+# Day 07 - February 09  (👟Sprint 2)
 
 Reminder to follow the course policies about academic integrity.
 
@@ -316,7 +374,7 @@ static gameLoop(time){
 ---
 ---
 
-# Day 05 - February 02  (👟Sprint)
+# Day 05 - February 02  (👟Sprint 1)
 
 <br/><br/>
 ---

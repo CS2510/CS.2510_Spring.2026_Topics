@@ -8,3 +8,7 @@
 - `static` member variables
 - `instanceof`
 - Passing variables to `super`
+- map function
+- tertiary operators
+- Set() class
+- ... spread operator
