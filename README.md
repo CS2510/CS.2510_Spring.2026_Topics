@@ -4,6 +4,75 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 14 - March 4 - Physics (🧑‍🏫Lecture)
+
+
+
+# Collision Rules
+- If two colliders on different game objects do not overlap, there is no interaction
+  - No Physics, no events
+  - Break
+- If we get here, we know two colliders on different game objects overlap
+- If you use Physics.IgnoreCollision, there is no interaction between colliders
+  - https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Physics.IgnoreCollision.html
+  - No physics, no events
+  - Break
+- If you disable collisions in the Layer Collision Matrix, then there is not interaction between the colliders on those layer(s)
+  - https://docs.unity3d.com/6000.3/Documentation/Manual/LayerBasedCollision.html
+  - No physics, no events
+  - Break
+- If neither of the game objects have a Rigid Body, then there will be no interaction between the colliders
+  - https://discussions.unity.com/t/what-are-the-oncollisionenter-requirements/104083
+  - No physics, no events
+  - Break
+- If we reach this point, then the physics engine will respond to the overlap of the colliders. We know that the colliders haven't been disabled with Physics.IgnoreCollisions, we know the layers the colliders are in are allowed to collide in the Layer Collision Matrix, and we know at least one of the game objects has a rigidBody attached
+- If either of the colliders is marked as a trigger, then:
+  - No physics, onTriggerXXX events
+- If we get here, neither of the colliders is marked as a trigger and we have at least on rigid body between the pair
+  - If they are both have rigid bodies
+    - Physics response on both, onCollisionXXX events
+  - If one has a rigid body
+    - Physics response only on the one with a rigid body, onCollisionXXX events for both
+
+
+```mermaid
+graph TD
+    A[Start] --> B{Overlap}
+    B --> |No| Z[No Interaction]
+    B -->|Yes| D{IgnoreCollision}
+    D -->|Yes| Y[No Interaction]
+    D -->|No| E{Layer Matrix}
+    E -->|Enabled| F[RigidBody Count]
+    E -->|Disabled| X[No Interaction]
+    F -->|0| W[No Interaction]
+    F -->|1| G{1+ Trigger}
+    F -->|2| I
+    G -->|Yes| H[No Physics, onTriggerXXX]
+    G -->|No| I{2 RigidBodies}
+    I -->|Yes| J[Physics, onCollisionXXX]
+    I -->|No| K[Physics on RigidBody, onCollisionXXX]
+    
+
+```
+
+
+
+## 🏁Final Code
+- [The final code for today]()
+<br/><br/>
+---
+---
+
+# Day 13 - March 2  - Events (👟Sprint)
+
+Discussion about Event handling
+
+<br/><br/>
+---
+---
+
+
+
 # Day 12 - February 25 - Mouse Collisions (🧑‍🏫Lecture 8)
 ![A computer mouse](support/mouse2.jpg)
 
