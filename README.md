@@ -46,12 +46,11 @@ graph TD
     E -->|Disabled| X[No Interaction]
     F -->|0| W[No Interaction]
     F -->|1| G{1+ Trigger}
-    F -->|2| I
+    F -->|2| M{1+ Trigger}
+    M -->|Yes| H
+    M -->|No| N[Both Physics, onCollisionXXX]
     G -->|Yes| H[No Physics, onTriggerXXX]
-    G -->|No| I{2 RigidBodies}
-    I -->|Yes| J[Physics, onCollisionXXX]
-    I -->|No| K[Physics on RigidBody, onCollisionXXX]
-    
+    G -->|No| K[One Physics, onCollisionXXX]
 
 ```
 
