@@ -39,10 +39,10 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 | Type  | Is Pushed?  |  Pushes Back?  | Initiates Events?  | isTrigger?  | RigidBody? |
 |---|---|---|---|---|---|
-| Coin  | No  |  No |  No |  Yes | No |
-| Floor  |  No |  Yes |  No |  No | No |
-| Sensor  |  No | No  |  Yes | Yes  | Yes |
-| Character  | Yes  | Yes  | Yes  | No | Yes |
+| 🪙 Coin  | No  |  No |  No |  Yes | No |
+| 🛗 Floor  |  No |  Yes |  No |  No | No |
+| ❓Sensor  |  No | No  |  Yes | Yes  | Yes |
+| 🏃 Character  | Yes  | Yes  | Yes  | No | Yes |
 
 
 # Detailed Collision Rules
