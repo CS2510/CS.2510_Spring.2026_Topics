@@ -6,9 +6,46 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 # Day 14 - March 4 - Physics (🧑‍🏫Lecture)
 
+# Collision Events
+- If either game object is marked as a trigger, then trigger events are fired:
+  - onTriggerEnter
+  - onTriggerStay
+  - onTriggerExit
+- If neither game object is marked as a trigger, then collision events are fired:
+  - onCollisionEnter
+  - onCollisionStay
+  - onTriggerStay
+ 
+# Collision types
+
+## Coins (Ghosts Objects)
+- Powerups like coins have the following properties
+  - They can't push objects
+  - They aren't pushed
+  - They don't initiate collision events
+- Ground/Elevators/Platforms have the following properties
+  - They push objects
+  - They aren't pushed
+  - They don't initiate collision events
+- Sensors (invisible colliders) have the following properties
+  - They don't push objects
+  - They aren't pushed
+  - They initiate collision events
+- Characters have the following properties
+  - They push objects
+  - They get pushed
+  - They initiate collision events
+- Here is a table with the same information:
+
+| Type  | Is Pushed?  |  Pushes Back?  | Initiates Events?  | isTrigger?  | RigidBody? |
+|---|---|---|---|---|---|
+| Coin  | No  |  No |  No |  Yes | No |
+| Floor  |  No |  Yes |  No |  No | No |
+| Sensor  |  No | No  |  Yes | Yes  | Yes |
+| Character  | Yes  | Yes  | Yes  | No | Yes |
 
 
-# Collision Rules
+# Detailed Collision Rules
 - If two colliders on different game objects do not overlap, there is no interaction
   - No Physics, no events
   - Break
