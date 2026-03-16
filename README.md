@@ -4,6 +4,21 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 17 - March 23 - (👟Sprint)
+<br/><br/>
+---
+---
+
+
+# Day 16 - March 11  - 🤒 Class Canceled
+
+
+<br/><br/>
+---
+---
+
+
+
 # Day 15 - March 9 - (👟Sprint)
 <br/><br/>
 ---
