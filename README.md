@@ -4,7 +4,14 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 15 - March 9 - (👟Sprint)
+<br/><br/>
+---
+---
+
+
 # Day 14 - March 4 - Physics (🧑‍🏫Lecture)
+![Weights](support/weights.jpg)
 
 
 
