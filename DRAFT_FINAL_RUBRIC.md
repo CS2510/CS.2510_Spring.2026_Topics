@@ -1,5 +1,5 @@
 # Final Rubric  (1st Draft):
-Your grade on teh final presentation will be based on whether you implement the basic requirements of this class and then whether you go above and beyond in your game engine and/or game.
+Your grade on teh final presentation will be based on whether you implement the basic requirements of this class and then whether you show mastery in your game engine and/or game.
 
 Key:
 - ✅ Implemented in class
@@ -28,7 +28,7 @@ Key:
 - ✅The game/engine supports collisions and collision resolution
 - ❌The game supports collision layers
 
-# Above and Beyond
+# Mastery
 You can do a lot of things to go above and beyond in your engine or game. Here are some ideas
 - Make an extensive game
 - Make a detailed game
@@ -44,8 +44,8 @@ The grade for the final will be based on  this rubric as follows:
 
 | Grade  | Expectations  |  
 |---|---|
-|  A | Meets the requirements and goes above and beyond in many areas  |
-|  B | Meets the requirements and goes above and beyond in some areas  |
-|  C | Meets the requirements, but does not go above and beyond |
+|  A | Meets the requirements and show mastery in many areas  |
+|  B | Meets the requirements and goes shows mastery in some areas  |
+|  C | Meets the requirements, but does not show mastery |
 |  D | Meets some of the requirements, but not all  |
 |  F | Fails to be meet the basic requirements  |
