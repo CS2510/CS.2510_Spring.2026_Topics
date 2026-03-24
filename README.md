@@ -4,7 +4,8 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
-# Day 17 - March 23 - (👟Sprint)
+# Day 17 - March 23 - (👟Sprint 7)
+- Discussed `Time.time`
 <br/><br/>
 ---
 ---
@@ -19,13 +20,13 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 
 
-# Day 15 - March 9 - (👟Sprint)
+# Day 15 - March 9 - (👟Sprint 6)
 <br/><br/>
 ---
 ---
 
 
-# Day 14 - March 4 - Physics (🧑‍🏫Lecture)
+# Day 14 - March 4 - Physics (🧑‍🏫Lecture 9)
 ![Weights](support/weights.jpg)
 
 # Collision Events
@@ -121,7 +122,7 @@ graph TD
 ---
 ---
 
-# Day 13 - March 2  - Events (👟Sprint)
+# Day 13 - March 2  - Events (👟Sprint 5)
 
 Discussion about Event handling
 
