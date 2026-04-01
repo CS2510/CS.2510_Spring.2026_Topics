@@ -4,6 +4,55 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 20 - April 1 - (🧑‍🏫Lecture)
+
+## 🖼️Activity:
+-[Zelda Tears of the Kingdom](https://www.youtube.com/watch?v=m9_O94KqRAo)
+-[Fate of the Old Republic](https://www.youtube.com/watch?v=lAmkl1jL0fo)
+
+## 💡New Idea:
+- 
+
+## 👩‍💻Code Together:
+-
+
+## 🧭Ideas to explore on your own
+- 
+
+## 🏁Final Code
+- [The final code for today](https://github.com/cs2510/Fall2025.Day)
+<br/><br/>
+---
+---
+
+
+# Day 19 - March 30 - SceneManager (👟Sprint)
+<br/><br/>
+---
+---
+
+
+# Day 18 - March 25 - Gravity & Platformers (🧑‍🏫Lecture)
+
+## 🖼️Activity:
+- 
+
+## 💡New Idea:
+- 
+
+## 👩‍💻Code Together:
+-
+
+## 🧭Ideas to explore on your own
+- 
+
+## 🏁Final Code
+- [The final code for today](https://github.com/cs2510/Fall2025.Day)
+<br/><br/>
+---
+---
+
+
 # Day 17 - March 23 - (👟Sprint 7)
 - Discussed `Time.time`
 <br/><br/>
