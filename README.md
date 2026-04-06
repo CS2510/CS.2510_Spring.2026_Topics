@@ -4,7 +4,9 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
-# Day 21 - April 6 - (👟Sprint 9)
+# Day 21 - April 6 - Tracking scenes (👟Sprint 9)
+
+- If we track the originating scene when we instantiate a game object, then we can remove appropriate game objects when we want to remove a scene that was added additively.
 <br/><br/>
 ---
 ---
