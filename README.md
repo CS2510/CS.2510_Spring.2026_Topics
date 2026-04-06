@@ -4,19 +4,38 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
-# Day 20 - April 1 - (🧑‍🏫Lecture)
+# Day 21 - April 6 - (👟Sprint 9)
+<br/><br/>
+---
+---
 
-## 🖼️Activity:
--[Zelda Tears of the Kingdom](https://www.youtube.com/watch?v=m9_O94KqRAo)
--[Fate of the Old Republic](https://www.youtube.com/watch?v=lAmkl1jL0fo)
 
-## 💡New Idea:
-- 
+# Day 20 - April 1 - (🧑‍🏫Lecture 12)
 
-## 👩‍💻Code Together:
--
+## 🖼️Activity: Game are built using hierarchies
+- Look for game object hierarchies in [Mario Kart 64](https://www.youtube.com/watch?v=w8K-heSWX8s)
+- Look how game object hierarchies are used in [Echoes of Wisdom](https://youtu.be/01onjjAUnOQ?si=_08wHwSa2sMCxuGz&t=123)
+- Look how game object hierarchies are used in [Zero Company](https://www.youtube.com/watch?v=rcxnRaZ6slU)
+- Look how game object hierarchy are used in [Zelda Tears of the Kingdom](https://www.youtube.com/watch?v=m9_O94KqRAo)
+
+## 💡New Idea: Game Object Can Have Child Game Objects
+- This create powerful hierarchies
+  - Allows for game objects to "hold" other game objects
+  - Easy alignment of UI
+  - Complex rotational movements
+
+## 👩‍💻Code Together: Game Object Hierarchy
+- Update Transform
+  - setParent
+  - getLocalMatrix
+  - getGlobalMatrix
+- Update GameObject draw
+- Update Collisions
+- Orbiting colliders
+
 
 ## 🧭Ideas to explore on your own
+- How can you convert your game to use hierarchies?
 - 
 
 ## 🏁Final Code
@@ -26,13 +45,43 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 
 
-# Day 19 - March 30 - SceneManager (👟Sprint)
+# Day 19 - March 30 - SceneManager (👟Sprint 8)
+
+
+## 💡New Idea: Delayed Scene Changes
+- We don't want to change the scene in the middle of an update loop.
+- Instead, we want to update the next time we start a frame in the game loop
+- By tracking the next scene in SceneManager, we can wait to make the change at the appropriate time.
+
+## 👩‍💻Code Together: Update the SceneManager Class
+```js
+
+ class SceneManager{
+     static currentScene
+     static nextScene
+     static update(){
+         if(SceneManager.nextScene){
+             SceneManager.currentScene = SceneManager.nextScene
+             SceneManager.nextScene = undefined
+         }
+     }
+     static loadScene(scene){
+         
+         SceneManager.nextScene = scene
+     }
+     
+     static getActiveScene(){
+         return SceneManager.currentScene
+     }
+ }
+```
+
 <br/><br/>
 ---
 ---
 
 
-# Day 18 - March 25 - Gravity & Platformers (🧑‍🏫Lecture)
+# Day 18 - March 25 - Gravity & Platformers (🧑‍🏫Lecture 11)
 
 ## 🖼️Activity:
 - 
@@ -55,6 +104,7 @@ These are the topics we are going to cover in class each day. Links to [example 
 
 # Day 17 - March 23 - (👟Sprint 7)
 - Discussed `Time.time`
+- Discussed `Time.framecount`
 <br/><br/>
 ---
 ---
@@ -109,12 +159,12 @@ These are the topics we are going to cover in class each day. Links to [example 
   - They initiate collision events
 - Here is a table with the same information:
 
-| Type  | Is Pushed?  |  Pushes Back?  | Initiates Events?  | isTrigger?  | RigidBody? |
-|---|---|---|---|---|---|
-| 🪙 Coin  | No  |  No |  No |  Yes | No |
-| 🛗 Floor  |  No |  Yes |  No |  No | No |
-| ❓Sensor  |  No | No  |  Yes | Yes  | Yes |
-| 🏃 Character  | Yes  | Yes  | Yes  | No | Yes |
+| Type        | Is Pushed? | Pushes Back? | Initiates Events? | isTrigger? | RigidBody? |
+| ----------- | ---------- | ------------ | ----------------- | ---------- | ---------- |
+| 🪙 Coin      | No         | No           | No                | Yes        | No         |
+| 🛗 Floor     | No         | Yes          | No                | No         | No         |
+| ❓Sensor     | No         | No           | Yes               | Yes        | Yes        |
+| 🏃 Character | Yes        | Yes          | Yes               | No         | Yes        |
 
 
 # Detailed Collision Rules
@@ -173,7 +223,16 @@ graph TD
 
 # Day 13 - March 2  - Events (👟Sprint 5)
 
-Discussion about Event handling
+## 💡New Idea: Events
+- Events provide a way for us to [loosely-couple](https://en.wikipedia.org/wiki/Loose_coupling) components that need to communicate
+- Setting up events requires three steps
+  - Registering an event listener
+  - Firing an event
+  - Handling the event
+
+## 👩‍💻Code Together: Events
+- Change the interaction between the enemy component and the score so that it uses events
+- Change the interaction between the button on the start scene so it is loosely coupled.
 
 <br/><br/>
 ---
