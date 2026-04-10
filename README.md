@@ -4,15 +4,82 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day 22 - April 8 - Layers & Cameras (🧑‍🏫Lecture 13)
+![Cameras Banner Image](support/camera.jpg)
+
+
+
+
+## 💡New Idea: Games are Drawn with Layers
+- See slide on layers
+- Think of them as a stack of transparencies
+
+## 🖼️Activity: Look at Hollow Knight for Layers
+- [Hollow Knight Speed Run](https://www.youtube.com/watch?v=7n9ngN8n8sQ&t=550s)
+- Which layers did you see in the game
+
+## 👩‍💻Code Together: Layers
+- Add the ability to add game options when you start a game
+- Add a list of default layers to the engine
+- If there are options and there are layers, add those to the layers in the engine
+- Allow game objects to have a layer property. 
+  - Set its default value to "default"
+- Allow game objects to have an options parameter in their constructor
+- In the scene, loop over the layers and then loop over game objects in that layer when rendering
+- Show a test scene with and without layers working.
+
+## 💡New Idea: Games are Drawn with a Camera
+- Early games didn't have a camera
+- Some puzzle games don't have a camera
+- But most everything else does
+
+## 👩‍💻Code Together: Cameras
+- Add a Camera component to the engine
+  - Add a Camera.main getter that returns a game object named Camera
+- In the Scene constructor, add a Camera game object with a Camera component as the first item
+- Before you render, apply the **inverse** of the camera transform
+- Make the camera follow a game object in a game
+
+## 💡New Idea: UI Layers are drawn above the camera
+- UI element move with our current setup
+
+## 👩‍💻Code Together: Stationary UI Layer
+- When rendering, filter out the UI layer from the main render loop
+- After restoring from the main render loop, separately render the game objects on the UI Layer
+
+
+## 🖼️Activity: Look at the Camera in Super Smash Bros for Cameras
+- Start about :45 - [Super Smash Bros Ultimate, 4 Players](https://www.youtube.com/watch?v=QrZn4trMK_U)
+
+## 💡New Idea: Cameras need several properties to look good
+- Cameras should not go out of boundaries
+- The camera should give the player some leeway
+
+## 👩‍💻Code Together: Camera properties
+- Clamp the position of the camera to be within certain bounds
+- Only move the camera if it is offset from the goal by a certain amount
+- Add a Mathf class with a clamp function
+  - Similar to the Mathf functions in Unity.
+
+## 🏁Final Code
+- [The final code for today](https://github.com/CS2510/Spring26-Day22-Cameras)
+<br/><br/>
+---
+---
+
+
 # Day 21 - April 6 - Tracking scenes (👟Sprint 9)
 
 - If we track the originating scene when we instantiate a game object, then we can remove appropriate game objects when we want to remove a scene that was added additively.
+## 🏁Final Code
+- [The final code for today](https://github.com/CS2510/Spring26-Day21-Scene-Tracking)
 <br/><br/>
 ---
 ---
 
 
 # Day 20 - April 1 - (🧑‍🏫Lecture 12)
+![Hierarchy Banner Image](support/hiearchy.jpg)
 
 ## 🖼️Activity: Game are built using hierarchies
 - Look for game object hierarchies in [Mario Kart 64](https://www.youtube.com/watch?v=w8K-heSWX8s)
@@ -41,7 +108,7 @@ These are the topics we are going to cover in class each day. Links to [example 
 - 
 
 ## 🏁Final Code
-- [The final code for today](https://github.com/cs2510/Fall2025.Day)
+- [The final code for today](https://github.com/CS2510/Spring26-Day20-Hierarchies)
 <br/><br/>
 ---
 ---
@@ -78,12 +145,17 @@ These are the topics we are going to cover in class each day. Links to [example 
  }
 ```
 
+
+## 🏁Final Code
+- [The final code for today](https://github.com/CS2510/Spring26-Day19-SceneManager)
+
 <br/><br/>
 ---
 ---
 
 
 # Day 18 - March 25 - Gravity & Platformers (🧑‍🏫Lecture 11)
+![Jump Banner Image](support/jump.jpg)
 
 ## 🖼️Activity:
 - 
@@ -98,15 +170,19 @@ These are the topics we are going to cover in class each day. Links to [example 
 - 
 
 ## 🏁Final Code
-- [The final code for today](https://github.com/cs2510/Fall2025.Day)
+- [The final code for today](https://github.com/CS2510/Spring26-Day18-Platformer)
 <br/><br/>
 ---
 ---
 
 
 # Day 17 - March 23 - (👟Sprint 7)
+![Timer Banner Image](support/timer.jpg)
 - Discussed `Time.time`
 - Discussed `Time.framecount`
+- 
+## 🏁Final Code
+- [The final code for today](https://github.com/CS2510/Spring26-Day17-Time)
 <br/><br/>
 ---
 ---
@@ -218,7 +294,7 @@ graph TD
 
 
 ## 🏁Final Code
-- [The final code for today]()
+- [The final code for today](https://github.com/CS2510/Spring26-Day14-Collision-Resolution)
 <br/><br/>
 ---
 ---
@@ -235,6 +311,9 @@ graph TD
 ## 👩‍💻Code Together: Events
 - Change the interaction between the enemy component and the score so that it uses events
 - Change the interaction between the button on the start scene so it is loosely coupled.
+
+## 🏁Final Code
+- [The final code for today](https://github.com/CS2510/Spring26-Day13-Events)
 
 <br/><br/>
 ---
@@ -361,7 +440,7 @@ $$ v_1\ dot\ v_2=v_{1x}*v_{2x}+v_{1y}*v_{2y}$$
 | Collisions when both objects respond to physics. For example, two marbles colliding.            | Collision        |
 
 ## 🏁Final Code
-- [The final code for today](https://github.com/cs2510/Fall2025.Day)
+- [The final code for today](https://github.com/CS2510/Spring26-Day10-Point-Overlap)
 <br/><br/>
 ---
 ---
@@ -432,12 +511,6 @@ Additional information about communication. See Day 08
 - Instead we communicate indirectly
 - One way to communicate indirectly is with `Globals`
 - By setting a static variable on `Globals`, components in other scenes can query than variable.
-
-
-
-
-
-
 
 
 
