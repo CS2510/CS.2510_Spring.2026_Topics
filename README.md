@@ -5,6 +5,32 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+# Day Day 23 - April 13 - Collision Layers (👟Sprint 10)
+![Cameras Banner Image](support/layers2.jpg)
+
+## 💡New Idea: Scenes can have background colors
+- This allows you to really differentiate start and stop scenes from the main game scenes
+- The Camera component of the main camera stores the background color
+
+## 💡New Idea: Collision Layers
+- Collision detections is an $O(n^2)$ operation.
+- We can speed up collision calculations by restricting the set of collisions it calculates
+- The list of possible collision is based on the layer system
+- The list of possible collision options are called collision layers
+
+## 👩‍💻Code Together: Collision Layers
+- Add a list of collision layers in the Engine
+- In the Scene, check if there are any collision layers
+  - If not, check all pairs of collisions like before
+- Only check collisions between the layers in collision layers
+
+
+
+<br/><br/>
+---
+---
+
+
 # Day 22 - April 8 - Layers & Cameras (🧑‍🏫Lecture 13)
 ![Cameras Banner Image](support/camera.jpg)
 
