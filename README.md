@@ -5,7 +5,89 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
-# Day Day 23 - April 13 - Collision Layers (👟Sprint 10)
+# Day 28 -   - Behavior Trees (🧑‍🏫Lecture)
+
+## 🖼️Activity:
+- Look at the boss in a game. How would you describe their behavior?
+- Look at a game character will a pursuit behavior. How would you describe that behavior?
+- Think about the rules you follow when you came to class today. How would you describe the things you thought about?
+
+## 💡New Idea: AI abstraction
+- AI in games can be implemented at one of three levels of abstraction
+  - Simple if statements
+  - State machines
+  - Behaviors trees
+- There are other approaches, but these are the major methods of abstraction.
+  - What is abstracting AI important?
+    - It allows other people to work just on AI
+- Behavior trees are used throughout AAA games.
+- Unreal Engine pioneered behavior trees in the commerical game engine space, but other game engines have adopted them as well.
+- One advantage of Behavior Trees is that they are easy to represent and debug graphically.
+- Behavior trees are *trees* that a component traces when it makes a decision
+- Behavior trees are made of nodes.
+  - There are control nodes that determine the path the logic takes in the tree
+  - There are ?action node that update the state of game objects
+- Control nodes can have child nodes.
+- All nodes have to return one of three values
+  - SUCCESS - The node has completed its task
+    - For example, the NPC found the player, the NPC finished a patrol cycle, or a control node finished calling all of its children
+  - FAILURE - The node failed to complete its task
+    - For example, the NPC could not find the player, something is blocking the NPC from finishing a patrol cycle, or a control node had a child node that returned FAILURE.
+  - RUNNING - The node did not succeed or fail. It should be called again on the next update.
+    - For example, an NPC is still trying to find the player, the NPC is in the middle of a patrol cycle, or a control node had a child node that returned RUNNING
+
+## 👩‍💻Code Together:
+- Build the major conttrol nodes
+- Build ?action nodes
+- Put them together to control an NPC in a game
+
+## 🧭Ideas to explore on your own
+- There are lots of control nodes that we can't cover in a lecture
+  - Random pick nodes
+  - Invert nodes
+  - Look at AI you have implemented in your game. How could be convert that into behavior trees?
+
+
+<br/><br/>
+---
+---
+
+
+# Day 26 -   - Letter Boxing (🧑‍🏫Lecture)
+
+## 🖼️Activity:
+- Identify letterboxing in games. For example, how is letter boxing used in [Brawl Stars](https://www.youtube.com/watch?v=j6nQgmtcN18)
+- Look at the aspect ratios used in iPhones over time. We can't predict the aspect ratio that the user will have, thus necessetating letter boxing.
+- The term letter boxing comes from early film where there were different aspect ratios in use--letter boxing was the solution.
+
+## 💡New Idea:
+- Letter boxing allows a game to have a fixed aspect ratio. This means your game will look the same, regardless of the size of the browser window.
+  - This makes it easier to predict what the user will see
+  - This can be used to prevent cheating or unfair advantanges on eGames
+  - This is *really* helpful when it comes to designing a UI
+
+## 👩‍💻Code Together:
+- Add letter boxing to our game
+  - We need to specify the aspect ratio that we want in our game
+  - We need to specify the width of the camera in world space
+  - We draw letter boxing after we draw the scene
+  - We draw four letter boxing rectangles, but at least two of them will have a width or height of 0, so they won't be seen
+  - The game objects drawn in world space do not need to be offset
+  - The game objects drawn in UI space do need to be offset
+  - We need to store the current size of the letter boxing in the Engine so it can be used throughout the game
+  - Letter boxing will also affect our screen space to UI space calculations, so this will alter our calculations about where the mouse is when we are checking for collisions in UI space.
+
+## 🧭Ideas to explore on your own
+- How could you add letter boxing to your game that doesn't use plain rectangles.
+- Browsers can be shrunk down to very small sizes. There are ways to try to force a browser window to be a certain size, but there are really no guarantees.
+- Can you find examples of letter boxing in other games?
+
+<br/><br/>
+---
+---
+
+
+# Day 23 - April 13 - Collision Layers (👟Sprint 10)
 ![Cameras Banner Image](support/layers2.jpg)
 
 ## 💡New Idea: Scenes can have background colors
