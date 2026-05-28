@@ -5,6 +5,7 @@ These are the topics we are going to cover in class each day. Links to [example 
 ---
 ---
 
+<<<<<<< Updated upstream
 # Day 28 -   - Behavior Trees (🧑‍🏫Lecture)
 
 ## 🖼️Activity:
@@ -48,11 +49,27 @@ These are the topics we are going to cover in class each day. Links to [example 
   - Look at AI you have implemented in your game. How could be convert that into behavior trees?
 
 
+=======
+# Day 28 - April 29 - Behavior Trees (Lecture 16)
+
+# Example Behavior Trees
+[Unreal Engine Example](https://d3kjluh73b9h9o.cloudfront.net/optimized/4X/d/a/7/da701fc6b7758397daf3fac0218c14dc68848ab3_2_1035x612.png)
+
+# Can you build the behavior tree
+- [Hollow Knight Playthrough](https://www.youtube.com/watch?v=G1atkq4C1KU) - Start at minute 6?
+
+
+
+
+
+# Day 27 - April 27  - (👟Sprint 12)
+>>>>>>> Stashed changes
 <br/><br/>
 ---
 ---
 
 
+<<<<<<< Updated upstream
 # Day 26 -   - Letter Boxing (🧑‍🏫Lecture)
 
 ## 🖼️Activity:
@@ -82,12 +99,21 @@ These are the topics we are going to cover in class each day. Links to [example 
 - Browsers can be shrunk down to very small sizes. There are ways to try to force a browser window to be a certain size, but there are really no guarantees.
 - Can you find examples of letter boxing in other games?
 
+=======
+# Day 26 - April 22 - Letter Boxing (Lecture 15)
+
+# Day 25 - April 20 - (👟Sprint 11)
+>>>>>>> Stashed changes
 <br/><br/>
 ---
 ---
 
 
+<<<<<<< Updated upstream
 # Day 23 - April 13 - Collision Layers (👟Sprint 10)
+=======
+#  Day 23 - April 13 - Collision Layers (👟Sprint 10)
+>>>>>>> Stashed changes
 ![Cameras Banner Image](support/layers2.jpg)
 
 ## 💡New Idea: Scenes can have background colors
